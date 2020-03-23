@@ -12,4 +12,12 @@ export class RankingPage implements OnInit {
   ngOnInit() {
   }
 
+  refresh(event: any) {
+    console.log('refresh');
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 2000);
+  }
+
 }

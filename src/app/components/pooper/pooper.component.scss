@@ -1,0 +1,15 @@
+.progress-outer {
+    width: 100%;
+    background-color: rgba($color: #302f2f, $alpha: 0.7);
+}
+
+.progress-inner {
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: var(--ion-color-primary);
+    text-align: right;
+    span {
+        margin-right: 10px;
+    }
+}
