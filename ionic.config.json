@@ -1,0 +1,7 @@
+{
+  "name": "wepoop",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
