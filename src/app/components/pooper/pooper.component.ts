@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pooper',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pooper.component.scss'],
 })
 export class PooperComponent implements OnInit {
+
+  @Input() pooper: any;
 
   constructor() { }
 

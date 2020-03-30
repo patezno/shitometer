@@ -2,13 +2,38 @@
 
 <ion-content [fullscreen]="true" class="ion-padding">
 
+    <ion-segment value="Dia">
+        <ion-segment-button value="Dia">
+            <ion-label>Día</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="Semana">
+            <ion-label>Semana</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="Mes">
+            <ion-label>Mes</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
     <ion-refresher slot="fixed" pullFactor="0.5" pullMin="100" pullMax="200" (ionRefresh)="refresh($event)">
         <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
 
-    <ion-list>
-        <app-pooper *ngFor="let popper of [1,2]"></app-pooper>
-    </ion-list>
+    <ion-card *ngFor="let item of items; index as i" (click)="expandItem(item)">
+        <ion-card-header>
+            <ion-item lines="none">
+                <ion-card-title>Grupo {{i + 1}}</ion-card-title>
+                <ion-icon *ngIf="!item.expanded" slot="end" name="arrow-down-outline"></ion-icon>
+                <ion-icon *ngIf="item.expanded" slot="end" name="arrow-up-outline"></ion-icon>
+            </ion-item>
+        </ion-card-header>
+        <ion-card-content>
+            <app-expandable [expandHeight]="expandableHeight" [expanded]="item.expanded">
+                <ion-list>
+                    <app-pooper *ngFor="let popper of item.people" [pooper]="popper"></app-pooper>
+                </ion-list>
+            </app-expandable>
+        </ion-card-content>
+    </ion-card>
 
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
         <ion-fab-button>

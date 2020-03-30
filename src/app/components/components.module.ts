@@ -4,13 +4,15 @@ import { HeaderComponent } from './header/header.component';
 import { IonicModule } from '@ionic/angular';
 import { PooperComponent } from './pooper/pooper.component';
 import { MapComponent } from './map/map.component';
+import { ExpandableComponent } from './expandable/expandable.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     PooperComponent,
-    MapComponent
+    MapComponent,
+    ExpandableComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { MapComponent } from './map/map.component';
   exports: [
     HeaderComponent,
     PooperComponent,
-    MapComponent
+    MapComponent,
+    ExpandableComponent
   ]
 })
 export class ComponentsModule { }
