@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "805751619346",
+    "firebase_url": "https://we-poop.firebaseio.com",
+    "project_id": "we-poop",
+    "storage_bucket": "we-poop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805751619346:android:3218000d566e82808dfdcb",
+        "android_client_info": {
+          "package_name": "io.patezno.wePoop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "805751619346-eu0o3j5jogcipi9jh8tpnqfope437jht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8A6sVTV-7wZKy7--f_VRpWW0Dr5Jal3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "805751619346-eu0o3j5jogcipi9jh8tpnqfope437jht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
