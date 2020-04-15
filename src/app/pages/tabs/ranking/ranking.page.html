@@ -29,7 +29,7 @@
         <ion-card-content>
             <app-expandable [expandHeight]="expandableHeight" [expanded]="item.expanded">
                 <ion-list>
-                    <app-pooper *ngFor="let popper of item.people" [pooper]="popper"></app-pooper>
+                    <app-pooper *ngFor="let popper of item.people" [pooper]="popper" [maxNumber]="calcMaxNumber(item)"></app-pooper>
                 </ion-list>
             </app-expandable>
         </ion-card-content>

@@ -10,6 +10,7 @@ export class RankingPage implements OnInit {
 
   items: any = [];
   expandableHeight: number;
+  maxNumber: number;
 
   constructor(
     private mockupService: MockupService
@@ -43,8 +44,16 @@ export class RankingPage implements OnInit {
     });
   }
 
-  calcExpandableHeight() {
+  calcExpandableHeight(): number {
     return 70 * this.items.length;
+  }
+
+  calcMaxNumber(item): number {
+    const num = [];
+    item.people.forEach((person) => {
+      num.push(person.times);
+    });
+    return Math.max(...num);
   }
 
   refresh(event: any) {
@@ -55,7 +64,7 @@ export class RankingPage implements OnInit {
     }, 2000);
   }
 
-  expandItem(item: any): void {
+  expandItem(item: any) {
     if (item.expanded) {
       item.expanded = false;
     } else {

@@ -17,6 +17,9 @@ export class TabsPage implements OnInit {
   constructor() {}
 
   ngOnInit() {
+  }
+
+  initNotifications() {
     console.log('Initializing HomePage');
 
     // Request permission to use push notifications

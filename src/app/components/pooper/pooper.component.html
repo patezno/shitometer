@@ -7,7 +7,7 @@
     <ion-label>
         <h2>{{pooper.name}}</h2>
         <div class="progress-outer">
-            <div class="progress-inner">
+            <div class="progress-inner" [style.width]="(pooper.times / maxNumber) * 100 + '%'">
                 <span>{{pooper.times}}</span>
             </div>
         </div>
