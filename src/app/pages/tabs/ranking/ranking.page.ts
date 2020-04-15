@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MockupService } from '../../../services/mockup.service';
+import { ActionSheetController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-ranking',
@@ -13,7 +15,8 @@ export class RankingPage implements OnInit {
   maxNumber: number;
 
   constructor(
-    private mockupService: MockupService
+    private mockupService: MockupService,
+    private actionSheetController: ActionSheetController
   ) { }
 
   ngOnInit() {
@@ -77,6 +80,33 @@ export class RankingPage implements OnInit {
         return listItem;
       });
     }
+  }
+
+  async showActionSheet() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Acciones',
+      buttons: [{
+        text: 'Nueva cagada',
+        icon: 'add-circle',
+        handler: () => {
+          console.log('Delete clicked');
+        }
+      }, {
+        text: 'Crear grupo',
+        icon: 'people-circle',
+        handler: () => {
+          console.log('Share clicked');
+        }
+      }, {
+        text: 'Cancelar',
+        icon: 'close-circle',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+      }]
+    });
+    await actionSheet.present();
   }
 
 }
