@@ -6,6 +6,16 @@ export const environment = {
   production: false,
   mapBox: {
     token: 'pk.eyJ1IjoicGF0ZXpubyIsImEiOiJjanp3ajJtbWUwMG1hM2JwNGNrb2dreWY5In0.nEKNqjeMeybCKz-tKnTm5A'
+  },
+  firebase: {
+    apiKey: 'AIzaSyBCguRyLxP-MVk5ws2UJbjDUYi7vJlx0KQ',
+    authDomain: 'we-poop.firebaseapp.com',
+    databaseURL: 'https://we-poop.firebaseio.com',
+    projectId: 'we-poop',
+    storageBucket: 'we-poop.appspot.com',
+    messagingSenderId: '805751619346',
+    appId: '1:805751619346:web:4562ff71432961048dfdcb',
+    measurementId: 'G-H2J065YDY9'
   }
 };
 
